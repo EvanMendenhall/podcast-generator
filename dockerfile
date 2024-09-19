@@ -1,15 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y \
-    python3 \
+RUN apt-get update && apt-get install -y \
+    python3.10 \
     python3-pip \
-    git && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN which pip3
-RUN pip3 --version
+    git
 
 RUN pip3 install PyYaml
 
