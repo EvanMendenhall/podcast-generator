@@ -4,10 +4,11 @@ RUN apt-get update && \
     apt-get install -y \
     python3 \
     python3-pip \
-    pyyaml \
     git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+RUN pip install pyyaml
 
 COPY feed.py /usr/bin/feed.py
 
