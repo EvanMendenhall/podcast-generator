@@ -8,7 +8,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install pyyaml
+RUN which pip3
+RUN pip3 --version
 
 COPY feed.py /usr/bin/feed.py
 
